@@ -7,19 +7,29 @@ public class capturable : MonoBehaviour
 
 	public SphereCollider captureRadius;
 	public float capturePoints = 10.0F;
-	private float remainingCapturePoints = capturePoints;
+	private float remainingCapturePoints;
 
 	private Allignment beingCapturedBy = Allignment.None;
 	private capturer currentCapturer;
 
+    void Awake()
+    {
+        Init();
+    }
+
 	// Use this for initialization
 	void Start () 
 	{
-		_allignment = GetComponent<Allignment ();
+		_allignment = GetComponent<Allignment> ();
 	}
-	
-	// Update is called once per frame
-	void Update () 
+
+    public void Init()
+    {
+        remainingCapturePoints = capturePoints;
+    }
+
+    // Update is called once per frame
+    void Update () 
 	{
 		if (beingCapturedBy != Allignment.None) 
 		{
@@ -45,7 +55,7 @@ public class capturable : MonoBehaviour
 			if (foundAllignment != _allignment) 
 			{
 				beingCapturedBy = foundAllignment;
-				capturer = GetComponent<capturer> ();
+                currentCapturer = foundCapturer;
 			}
 		}
 	}

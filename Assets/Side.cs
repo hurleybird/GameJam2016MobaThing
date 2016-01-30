@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 public enum Allignment
-{\
+{
 	None,
 	Green,
 	Blue
