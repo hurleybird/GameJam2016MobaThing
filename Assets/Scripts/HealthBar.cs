@@ -21,6 +21,7 @@ public class HealthBar : MonoBehaviour {
         rect = GetComponent<RectTransform>();
         canvas = transform.parent.GetComponentInParent<Canvas>();
         camToUse = canvas.worldCamera;
+        SetLocation();
     }
 	
 	void FixedUpdate  () {
@@ -31,6 +32,11 @@ public class HealthBar : MonoBehaviour {
             return;
         }
 
+        SetLocation();
+    }
+
+    void SetLocation()
+    {
         Vector2 pos;
         RectTransformUtility.ScreenPointToLocalPointInRectangle(canvas.transform as RectTransform, camToUse.WorldToScreenPoint(health.transform.position), canvas.worldCamera, out pos);
         transform.position = canvas.transform.TransformPoint(pos);

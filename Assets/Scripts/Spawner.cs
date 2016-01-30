@@ -30,6 +30,7 @@ public class Spawner : MonoBehaviour {
     {
         GameObject newObj = Instantiate(creepFab, spawnTrans.position, Quaternion.identity) as GameObject;
         newObj.layer = gameObject.layer;
+        newObj.GetComponent<Renderer>().material = GetComponent<Renderer>().material;
         Creep newCreep = newObj.GetComponent<Creep>();
         newCreep.Init(waypoints);
         timeLeft = spawnDelay;
