@@ -8,8 +8,11 @@ public class Projectile : MonoBehaviour {
     [SerializeField]
     private float damage = 1;
 
-    void Awake ()
+    private Team team;
+
+    public void Init (Team _team)
     {
+        team = _team;
     }
 	
 	// Update is called once per frame
@@ -22,7 +25,11 @@ public class Projectile : MonoBehaviour {
         Health hitHealth = other.GetComponent<Health>();
         if (hitHealth != null)
         {
-            hitHealth.TakeDamage(damage);
+            if (hitHealth.TakeDamage(damage))
+            {
+                Debug.Log(team != null);
+                team.Monies += hitHealth.MoniesToGive();
+            }
         }
         Die();
     }

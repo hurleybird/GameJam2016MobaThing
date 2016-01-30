@@ -11,7 +11,10 @@ public class Health : MonoBehaviour {
     [SerializeField]
     private float maxHealth;
     private float currentHealth;
+    [SerializeField]
+    private int moniesToGive = 0;
 	
+    public int MoniesToGive() { return moniesToGive; }
     public float MaxHealth(){ return maxHealth; }
     public float CurrentHealth() { return currentHealth; }
 
@@ -29,16 +32,26 @@ public class Health : MonoBehaviour {
             currentHealth = maxHealth;
     }
 
-    public void TakeDamage(float damage)
+    public bool TakeDamage(float damage)
     {
         currentHealth -= damage;
         if (currentHealth <= 0)
-            Kill();
+        {
+            StartCoroutine(KillSequence());
+            return true;
+        }
+        return false;
     }
 
     public void Reset()
     {
         currentHealth = maxHealth; 
+    }
+
+    IEnumerator KillSequence()
+    {
+        yield return new WaitForSeconds(0.1f);
+        Kill();
     }
 
     void Kill()
@@ -48,5 +61,4 @@ public class Health : MonoBehaviour {
             OnKilled(gameObject);
         }
     }
-
 }

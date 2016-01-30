@@ -20,15 +20,15 @@ public class Player : MonoBehaviour {
 
     public void FireAA()
     {
-        aa.Activate();
+        aa.Activate(_team);
     }
 
     public void FireAbility1()
     {
-        ability1.Activate();
+        ability1.Activate(_team);
     }
     public void FireAbility2()
     {
-        ability2.Activate();
+        ability2.Activate(_team);
     }
 }

@@ -22,21 +22,22 @@ public abstract class Ability : MonoBehaviour
             timeLeft -= Time.deltaTime;
     }
 
-    virtual public void Activate()
+    virtual public void Activate(Team team)
     {
         if (timeLeft > 0)
             return;
         else
         {
             timeLeft = cooldown;
-            Fire();
+            Fire(team);
         }
     }
 
-    public void Fire()
+    public void Fire(Team team)
     {
         GameObject newObj = Instantiate(toSpawn, spawnPoint.position, transform.rotation) as GameObject;
         newObj.gameObject.layer = gameObject.layer + 2;
+        newObj.GetComponent<Projectile>().Init(team);
         FireSecondPart();
     }
     protected abstract void FireSecondPart();
