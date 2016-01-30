@@ -8,21 +8,22 @@ public class RespawnTimerUI : MonoBehaviour {
     [SerializeField]
     private GameObject timerObj;
     private RespawnTimer respawnTimer;
+    private bool isActive = false;
 	
     public void Init(RespawnTimer _respawnTimer)
     {
         respawnTimer = _respawnTimer;
         timerObj.SetActive(true);
+        isActive = true;
     }
 
 	void LateUpdate ()
     {
-        if (respawnTimer == null)
-        {
-            timerObj.SetActive(false);
+        if (!isActive)
             return;
-        }
-        if (timerObj.activeInHierarchy)
+        else if (respawnTimer == null)
+            isActive = false;
+        else if (timerObj.activeInHierarchy)
             text.text = "Respawn in " + (int)respawnTimer.TimeRemainingToRespawn + " seconds";
 	}
 }

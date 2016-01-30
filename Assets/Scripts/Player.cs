@@ -8,13 +8,20 @@ public class Player : MonoBehaviour {
     [SerializeField]
     private Allignment side;
     [SerializeField]
+    private Ability aa;
+    [SerializeField]
     private Ability ability1;
     [SerializeField]
     private Ability ability2;
 
     public Team Team { get { return _team; } }
 
-    public Allignment Side { get { return side; } }
+    public Allignment Side { get { return side; } } 
+
+    public void FireAA()
+    {
+        aa.Activate();
+    }
 
     public void FireAbility1()
     {

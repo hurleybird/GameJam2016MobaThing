@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SwordStrike : Ability
+public class Player1AA : Ability
 {
     protected override void FireSecondPart()
     {
