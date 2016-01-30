@@ -5,18 +5,20 @@ public abstract class Ability : MonoBehaviour
 {
     [SerializeField]
     protected float cooldown;
-    protected float timeLeft;
+    protected float timeLeft = 0;
 
     public float GetCooldownProgress()
     {
-        float wait = cooldown - timeLeft;
-        return 1 - (wait > 0 ? wait : 0);
+
+        
+        float wait = (cooldown - timeLeft) * (1 / cooldown);
+        return (wait > 0 ? wait : 0);
     }
 
     void Update()
     {
-        if (cooldown > 0)
-            cooldown -= Time.deltaTime;
+        if (timeLeft > 0)
+            timeLeft -= Time.deltaTime;
 
     }
 

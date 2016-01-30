@@ -5,7 +5,7 @@ public class SwordStrike : Ability
 {
     public override void Activate()
     {
-        if (cooldown > 0)
+        if (timeLeft > 0)
             return;
         else
         {

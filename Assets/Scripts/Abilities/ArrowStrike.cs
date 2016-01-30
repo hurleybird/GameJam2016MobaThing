@@ -1,15 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ArrowStrike : MonoBehaviour {
+public class ArrowStrike : Ability
+{
+    public override void Activate()
+    {
+        if (timeLeft > 0)
+            return;
+        else
+        {
+            timeLeft = cooldown;
+            Fire();
+        }
+    }
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    void Fire()
+    {
+
+    }
 }
