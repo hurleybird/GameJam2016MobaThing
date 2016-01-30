@@ -5,32 +5,48 @@ public class CharacterController : MonoBehaviour {
 
     [SerializeField]
     float movementRate = 0.1f;
+    [SerializeField]
+    float turnRate = 100f;
+    [SerializeField]
     private Player player;
     private Rigidbody rBody;
+    private string prefix = "";
 
 	// Use this for initialization
 	void Start () {
         rBody = GetComponent<Rigidbody>();
         player = GetComponent<Player>();
-	}
+        if (player.Side() == Allignment.Blue)
+            prefix = "Player2";
+    }
 	
 	// Update is called once per frame
 	void FixedUpdate () {
 
-        float xPos = Input.GetAxis("Horizontal");
-        float zPos = Input.GetAxis("Vertical");
+        float xPos = Input.GetAxis(prefix + "Horizontal");
+        float zPos = Input.GetAxis(prefix + "Vertical");
 
-        if (xPos != 0)
+        Vector3 inputVec =  Vector3.Normalize(new Vector3(xPos, 0, zPos));
+
+        if (inputVec.magnitude > 0.05f)
         {
-            rBody.AddForce(xPos * movementRate * Time.deltaTime, 0, 0);
+            Quaternion lookDir = Quaternion.LookRotation(inputVec);
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookDir, Time.deltaTime * turnRate);
         }
-        if (zPos != 0)
+
+        //transform.Translate(new Vector3(inputVec.x * 15f * Time.deltaTime, 0, inputVec.z * 15f * Time.deltaTime));
+
+        if (inputVec.x != 0)
         {
-            rBody.AddForce(0, 0, zPos * movementRate * Time.deltaTime);
+            rBody.AddForce(inputVec.x * movementRate * Time.deltaTime, 0, 0);
         }
-        if (Input.GetButton("Fire1"))
+        if (inputVec.z != 0)
+        {
+           rBody.AddForce(0, 0, inputVec.z * movementRate * Time.deltaTime);
+        }
+        if (Input.GetButton(prefix + "Fire1"))
             player.FireAbility1();
-        if (Input.GetButton("Fire2"))
+        if (Input.GetButton(prefix + "Fire2"))
             player.FireAbility2();
 
     }

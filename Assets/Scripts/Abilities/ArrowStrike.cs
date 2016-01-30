@@ -16,6 +16,7 @@ public class ArrowStrike : Ability
 
     void Fire()
     {
-
+        GameObject newObj = Instantiate(toSpawn, spawnPoint.position, transform.rotation) as GameObject;
+        newObj.gameObject.layer = gameObject.layer + 2;
     }
 }
