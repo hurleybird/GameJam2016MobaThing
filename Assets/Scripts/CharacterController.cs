@@ -16,7 +16,7 @@ public class CharacterController : MonoBehaviour {
 	void Start () {
         rBody = GetComponent<Rigidbody>();
         player = GetComponent<Player>();
-        if (player.Side() == Allignment.Blue)
+        if (player.Side == Allignment.Blue)
             prefix = "Player2";
     }
 	

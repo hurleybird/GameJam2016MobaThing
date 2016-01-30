@@ -1,7 +1,10 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 
 public class Health : MonoBehaviour {
+
+    public event Action<GameObject> OnKilled;
 
     [SerializeField]
     private float regenRate;
@@ -33,9 +36,17 @@ public class Health : MonoBehaviour {
             Kill();
     }
 
+    public void Reset()
+    {
+        currentHealth = maxHealth; 
+    }
+
     void Kill()
     {
-
+        if (OnKilled != null)
+        {
+            OnKilled(gameObject);
+        }
     }
 
 }
