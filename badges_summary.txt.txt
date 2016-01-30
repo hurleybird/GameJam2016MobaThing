@@ -1,0 +1,40 @@
+touch screen
+twitter api
+drinking game
+a distracting scene
+impossible to lose the game
+crafting/combining obj
+achievements
+Canadian Heritage Minutes reference
+tomboy woman character
+minigames
+real life interaction
+multiple screens
+control multiple chars
+online leaderboards
+procedural generated
+visual illusions/deception
+multiple win conditions
+to be continued storyline
+horror game
+first person UI
+record sound effects
+use photographs for textures (taken during gamejam)
+visually cute
+art assets are made of shapes
+use webcam or mic input
+4 player local
+asymmetric multiplayer
+dynamic soundtrack
+character customization
+branching storyline
+canadian references
+educational
+no ending/goal
+some live data from the internet
+no words
+cheating is possible
+cutscene
+particle effects
+open source assets
+game did not compile
