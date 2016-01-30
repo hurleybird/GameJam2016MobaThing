@@ -4,6 +4,8 @@ using System.Collections;
 public class Player : MonoBehaviour {
 
     [SerializeField]
+    private Allignment side;
+    [SerializeField]
     private Ability ability1;
     [SerializeField]
     private Ability ability2;
@@ -15,5 +17,10 @@ public class Player : MonoBehaviour {
     public void FireAbility2()
     {
         ability2.Activate();
+    }
+
+    public Allignment Side()
+    {
+        return side;
     }
 }

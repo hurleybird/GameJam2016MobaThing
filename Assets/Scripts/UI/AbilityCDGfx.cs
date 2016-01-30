@@ -9,7 +9,7 @@ public class AbilityCDGfx : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        GetComponent<Image>();
+        icon = GetComponent<Image>();
 	}
 	
 	// Update is called once per frame

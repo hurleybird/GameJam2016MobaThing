@@ -3,7 +3,7 @@
 public enum Allignment
 {
 	None,
-	Green,
+	Red,
 	Blue
 }
 

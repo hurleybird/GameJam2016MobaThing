@@ -10,7 +10,7 @@ public abstract class Ability : MonoBehaviour
     public float GetCooldownProgress()
     {
         float wait = cooldown - timeLeft;
-        return wait > 0 ? wait : 0;
+        return 1 - (wait > 0 ? wait : 0);
     }
 
     void Update()
