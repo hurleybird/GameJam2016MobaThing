@@ -31,8 +31,10 @@ public class HealthBar : MonoBehaviour {
             Destroy(gameObject);
             return;
         }
-
-        SetLocation();
+        else if (!health.gameObject.activeInHierarchy)
+            rect.anchoredPosition = new Vector2(1000, 1000);
+        else
+            SetLocation();
     }
 
     void SetLocation()

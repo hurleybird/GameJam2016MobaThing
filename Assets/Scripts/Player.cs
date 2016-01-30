@@ -4,11 +4,15 @@ using System.Collections;
 public class Player : MonoBehaviour {
 
     [SerializeField]
+    private Team _team;
+    [SerializeField]
     private Allignment side;
     [SerializeField]
     private Ability ability1;
     [SerializeField]
     private Ability ability2;
+
+    public Team Team { get { return _team; } }
 
     public Allignment Side { get { return side; } }
 

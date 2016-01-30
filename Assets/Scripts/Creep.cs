@@ -3,7 +3,6 @@ using System.Collections.Generic;
 
 public class Creep : MonoBehaviour {
 
-    [SerializeField]
     private List<Transform> waypoints = new List<Transform>();
     private int waypointIndex = 0;
     [SerializeField]
@@ -17,9 +16,12 @@ public class Creep : MonoBehaviour {
     private Transform target;
     private Rigidbody rBody;
 
-    public void Init(List<Transform> _waypoints)
+    public Team Team { get; set; }
+
+    public void Init(List<Transform> _waypoints, Team _team)
     {
         waypoints = _waypoints;
+        Team = _team;
     }
 
     void Start()

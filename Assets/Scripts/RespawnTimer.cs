@@ -8,25 +8,25 @@ public class RespawnTimer : MonoBehaviour
     public event Action OnRespawn;
 
     [SerializeField]
-    private float timeRemainingToRespawn;
+    private float _timeRemainingToRespawn;
     private GameObject player;
 
     public float TimeRemainingToRespawn
     {
-        get { return timeRemainingToRespawn; }
+        get { return _timeRemainingToRespawn; }
     }
 
     public void Init(float respawnTime, GameObject player)
     {
-        timeRemainingToRespawn = respawnTime;
+        _timeRemainingToRespawn = respawnTime;
         this.player = player;
     }
 
     public void Update()
     {
-        timeRemainingToRespawn -= Time.deltaTime;
+        _timeRemainingToRespawn -= Time.deltaTime;
 
-        if (timeRemainingToRespawn <= 0)
+        if (_timeRemainingToRespawn <= 0)
         {
             OnRespawn();
             Destroy(this);
