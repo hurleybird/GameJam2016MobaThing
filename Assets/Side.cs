@@ -1,14 +1,15 @@
 ﻿using UnityEngine;
 
-public enum allignment
-{
+public enum Allignment
+{\
+	None,
 	Green,
 	Blue
 }
 
 public class Side : MonoBehaviour
 {
-	public allignment side;
+	public Allignment side;
 }
 
 
