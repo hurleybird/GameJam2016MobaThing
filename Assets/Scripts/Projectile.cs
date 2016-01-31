@@ -10,6 +10,9 @@ public class Projectile : MonoBehaviour {
     [SerializeField]
     private float range = 5.0F;
 
+    [SerializeField]
+    private AudioSource soundToPlay;
+
     public float Range { get { return range; } }
 
     private float remainingDistance;
