@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Projectile : MonoBehaviour {
-
+public class Projectile : MonoBehaviour 
+{
     [SerializeField]
     private float speed;
     [SerializeField]
@@ -10,13 +10,13 @@ public class Projectile : MonoBehaviour {
     [SerializeField]
     private float range = 5.0F;
 
-    [SerializeField]
-    private AudioSource soundToPlay;
-
     public float Range { get { return range; } }
 
     private float remainingDistance;
     private Team team;
+
+    [SerializeField]
+    private GameObject hitSoundPrefab;
 
     public void Start()
     {
@@ -57,6 +57,8 @@ public class Projectile : MonoBehaviour {
 
     void Die()
     {
+        if (hitSoundPrefab != null)
+            SoundPointManager.Instance.PlaySoundAtPoint(transform.position, hitSoundPrefab);
         Destroy(gameObject);
     }
 }

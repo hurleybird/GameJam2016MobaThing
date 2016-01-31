@@ -20,6 +20,11 @@ public class Health : MonoBehaviour {
     public float MaxHealth(){ return maxHealth; }
     public float CurrentHealth() { return currentHealth; }
 
+    [SerializeField]
+    private GameObject[] damageSoundsToPlay;
+    [SerializeField]
+    private GameObject[] deathSoundsToPlay;
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -61,6 +66,8 @@ public class Health : MonoBehaviour {
 
     public bool TakeDamage(float damage)
     {
+        PlaySound(damageSoundsToPlay);
+
         currentHealth -= damage;
         if (currentHealth <= 0)
         {
@@ -85,6 +92,7 @@ public class Health : MonoBehaviour {
 
     IEnumerator KillSequence()
     {
+        PlaySound(deathSoundsToPlay);
         yield return new WaitForSeconds(0.1f);
         Kill();
     }
@@ -95,5 +103,13 @@ public class Health : MonoBehaviour {
         {
             OnKilled(gameObject);
         }
+    }
+
+    private void PlaySound(GameObject[] availiableSounds)
+    {
+        if (availiableSounds == null)
+            return;
+        int soundIndexToPlay = UnityEngine.Random.Range(0, availiableSounds.Length + 1);
+        SoundPointManager.Instance.PlaySoundAtPoint(transform.position, availiableSounds[soundIndexToPlay]);
     }
 }
