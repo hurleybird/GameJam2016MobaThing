@@ -3,8 +3,6 @@ using System.Collections;
 
 public class HealBomb : MonoBehaviour {
 
-    [SerializeField]
-    private SphereCollider sCol;
     private LayerMask mask;
     [SerializeField]
     private float lifeTime = 3.5f;
@@ -21,7 +19,7 @@ public class HealBomb : MonoBehaviour {
         if (lifeTime < 0)
             Destroy(gameObject);
 
-        RaycastHit[] hits = Physics.SphereCastAll(transform.position, 5f, Vector3.forward, mask);
+        RaycastHit[] hits = Physics.SphereCastAll(transform.position, 5f, Vector3.forward, 1 << 9);
 
         foreach (RaycastHit hit in hits)
         {

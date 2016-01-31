@@ -40,9 +40,9 @@ public abstract class Ability : MonoBehaviour
         Projectile newProjectile = newObj.GetComponent<Projectile>();
         if (newProjectile != null)
             newProjectile.Init(team);
-        FireSecondPart();
+        FireSecondPart(newObj, team);
     }
-    protected abstract void FireSecondPart();
+    protected abstract void FireSecondPart(GameObject newObj, Team team);
 
 
 }
