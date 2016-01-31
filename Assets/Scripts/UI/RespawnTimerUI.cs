@@ -22,7 +22,10 @@ public class RespawnTimerUI : MonoBehaviour {
         if (!isActive)
             return;
         else if (respawnTimer == null)
+        {
+            timerObj.SetActive(false);
             isActive = false;
+        }
         else if (timerObj.activeInHierarchy)
             text.text = "Respawn in " + (int)respawnTimer.TimeRemainingToRespawn + " seconds";
 	}

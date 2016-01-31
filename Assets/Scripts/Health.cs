@@ -37,6 +37,7 @@ public class Health : MonoBehaviour {
         currentHealth -= damage;
         if (currentHealth <= 0)
         {
+            //Kill();
             StartCoroutine(KillSequence());
             return true;
         }
