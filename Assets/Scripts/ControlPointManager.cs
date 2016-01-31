@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -18,9 +19,19 @@ public class ControlPointManager : MonoBehaviour {
     [SerializeField]
     private GameObject progressPrefab;
 
+    [SerializeField]
+    private GameObject countdownObj;
+    [SerializeField]
+    private Text count;
+    [SerializeField]
+    private int timeLimit;
+    private int timeLeft;
+
     // Use this for initialization
     void Start () {
+        timeLeft = timeLimit;
         StartCoroutine(GiveGold());
+        StartCoroutine(RitualVictory());
         foreach (Capturable cPoint in cPoints)
         {
             CreateHealthBar(cPoint);
@@ -38,10 +49,46 @@ public class ControlPointManager : MonoBehaviour {
         newObj.GetComponent<ProgressBar>().Init(cPoint);
     }
 
-    // Update is called once per frame
-    void Update () {
-	
-	}
+    IEnumerator RitualVictory ()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(1f);
+            if (cPoints.TrueForAll(x => x.Team == team1))
+            {
+                if (timeLeft == 0)
+                {
+                    GameOver.Instance.EndGame("Red Wins!", Color.red);
+                    yield break;
+                }
+                countdownObj.SetActive(true);
+                timeLeft--;
+                count.color = Color.red;
+                count.text = timeLeft.ToString();
+
+            }
+            else if (cPoints.TrueForAll(x => x.Team == team1))
+            {
+                if (timeLeft == 0)
+                {
+                    GameOver.Instance.EndGame("Blue Wins!", Color.blue);
+                    yield break;
+                }
+                countdownObj.SetActive(true);
+                timeLeft--;
+                count.color = Color.blue;
+                count.text = timeLeft.ToString();
+            }
+            else
+            {
+                countdownObj.SetActive(false);
+                timeLeft = timeLimit;
+            }
+            
+        }
+
+
+    }
 
     IEnumerator GiveGold()
     {

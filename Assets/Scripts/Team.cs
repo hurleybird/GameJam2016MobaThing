@@ -7,6 +7,9 @@ public enum UpgradeType : int { Attack = 0, Health = 1, Speed = 2 }
 public class Team : MonoBehaviour {
 
     [SerializeField]
+    private HealthBarManager _hBarMan;
+    public HealthBarManager HBarMan {  get { return _hBarMan; } }
+    [SerializeField]
     private Allignment _side;
     public List<Capturable> ObjectivesHeld { get; set; }
     public List<Upgrade> Upgrades { get; set; }

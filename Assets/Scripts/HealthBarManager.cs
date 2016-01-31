@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class HealthBarManager : Singleton<HealthBarManager> {
+public class HealthBarManager : MonoBehaviour {
 
     [SerializeField]
     private Transform team1Spawn;

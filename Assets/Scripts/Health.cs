@@ -24,32 +24,29 @@ public class Health : MonoBehaviour {
     {
         currentHealth = maxHealth;
         adjustedMaxHealth = maxHealth;
-        HealthBarManager.Instance.CreateHealthBar(this);
 
         Player player = GetComponent<Player>();
         if (player != null)
         {
             team = player.Team;
-            return;
         }
         Creep creep = GetComponent<Creep>();
         if (creep != null)
         {
             team = creep.Team;
-            return;
         }
         Spawner spawner = GetComponent<Spawner>();
         if (spawner != null)
         {
             team = spawner.Team;
-            return;
         }
         Tower tower = GetComponent<Tower>();
         if (tower != null)
         {
             team = tower.Team;
-            return;
         }
+
+        team.HBarMan.CreateHealthBar(this);
     }
 
     void Update()
