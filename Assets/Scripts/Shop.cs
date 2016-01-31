@@ -26,6 +26,7 @@ public class Shop : MonoBehaviour {
         shopPrompt.SetActive(false);
         if (Vector3.Distance(player.transform.position, transform.position) <= shopRange)
         {
+            player.GetComponent<Health>().TakeHealing(40 * Time.deltaTime);
             if (!shopUI.activeInHierarchy)
             {
                 shopPrompt.SetActive(true);

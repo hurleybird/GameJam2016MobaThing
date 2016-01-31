@@ -23,6 +23,7 @@ public class Health : MonoBehaviour {
     void Start()
     {
         currentHealth = maxHealth;
+        adjustedMaxHealth = maxHealth;
         HealthBarManager.Instance.CreateHealthBar(this);
 
         Player player = GetComponent<Player>();
@@ -71,6 +72,13 @@ public class Health : MonoBehaviour {
             return true;
         }
         return false;
+    }
+
+    public void TakeHealing(float healing)
+    {
+        currentHealth += healing;
+        if (currentHealth > adjustedMaxHealth)
+            currentHealth = adjustedMaxHealth;
     }
 
     public void Reset()
