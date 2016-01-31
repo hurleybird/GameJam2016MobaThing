@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 
 public class Player : MonoBehaviour {
 
@@ -14,9 +14,19 @@ public class Player : MonoBehaviour {
     [SerializeField]
     private Ability ability2;
 
+    public List<Ability> Abilities { get; private set; }
+
     public Team Team { get { return _team; } }
 
     public Allignment Side { get { return side; } } 
+
+    void Awake()
+    {
+        Abilities = new List<Ability>();
+        Abilities.Add(aa);
+        Abilities.Add(ability1);
+        Abilities.Add(ability2);
+    }
 
     public void FireAA()
     {
