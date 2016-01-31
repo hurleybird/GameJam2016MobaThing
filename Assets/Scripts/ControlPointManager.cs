@@ -27,6 +27,13 @@ public class ControlPointManager : MonoBehaviour {
     private int timeLimit;
     private int timeLeft;
 
+    private MusicManager music;
+
+    void Awake()
+    {
+        music = GetComponent<MusicManager>();
+    }
+
     // Use this for initialization
     void Start () {
         timeLeft = timeLimit;
@@ -65,6 +72,7 @@ public class ControlPointManager : MonoBehaviour {
                 timeLeft--;
                 count.color = Color.red;
                 count.text = timeLeft.ToString();
+                music.Frantic = true;
 
             }
             else if (cPoints.TrueForAll(x => x.Team == team2))
@@ -78,11 +86,13 @@ public class ControlPointManager : MonoBehaviour {
                 timeLeft--;
                 count.color = Color.blue;
                 count.text = timeLeft.ToString();
+                music.Frantic = true;
             }
             else
             {
                 countdownObj.SetActive(false);
                 timeLeft = timeLimit;
+                music.Frantic = false;
             }
             
         }

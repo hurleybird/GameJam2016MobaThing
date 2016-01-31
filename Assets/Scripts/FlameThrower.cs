@@ -7,7 +7,7 @@ public class FlameThrower : MonoBehaviour
     private Transform center;
     private LayerMask mask;
     [SerializeField]
-    private float lifeTime = 3.65f;
+    private float lifeTime = 3.8f;
     private Team team;
 
     public void Init(Team _team)
@@ -29,7 +29,7 @@ public class FlameThrower : MonoBehaviour
         if (lifeTime < 0)
             Destroy(gameObject);
 
-        RaycastHit[] hits = Physics.BoxCastAll(center.position, new Vector3(4, 2, 2), Vector3.forward, Quaternion.identity, 8f, 1 << 9);
+        RaycastHit[] hits = Physics.BoxCastAll(center.position, new Vector3(4.5f, 2.5f, 2.5f), Vector3.forward, Quaternion.identity, 8f, 1 << 9);
 
         foreach (RaycastHit hit in hits)
         {
