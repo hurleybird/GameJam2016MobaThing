@@ -75,9 +75,9 @@ public class Creep : MonoBehaviour {
 
         float targetDistance = Vector3.Distance(transform.position, target.position);
 
-        if (aggro != null && targetDistance > 2f)
+        if (aggro != null && targetDistance > 5f)
             rBody.AddForce(transform.forward * movementRate * Team.GetSpeedMult());
-        else if (aggro == null && targetDistance > 0.5f)
+        else if (aggro == null && targetDistance > 1f)
             rBody.AddForce(transform.forward * movementRate * Team.GetSpeedMult());
         else if (waypointIndex < waypoints.Count - 1)
         {

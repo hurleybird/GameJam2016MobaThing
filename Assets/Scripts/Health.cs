@@ -43,6 +43,12 @@ public class Health : MonoBehaviour {
             team = spawner.Team;
             return;
         }
+        Tower tower = GetComponent<Tower>();
+        if (tower != null)
+        {
+            team = tower.Team;
+            return;
+        }
     }
 
     void Update()
