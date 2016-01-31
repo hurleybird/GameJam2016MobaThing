@@ -17,12 +17,16 @@ public class Creep : MonoBehaviour {
     private Transform target;
     private Rigidbody rBody;
 
+    [SerializeField]
+    private Renderer minimapIconRend;
+
     public Team Team { get; set; }
 
     public void Init(List<Transform> _waypoints, Team _team)
     {
         waypoints = _waypoints;
         Team = _team;
+        minimapIconRend.material.color = Team.Color;
     }
 
     void Start()

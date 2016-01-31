@@ -11,9 +11,16 @@ public class Team : MonoBehaviour {
     public HealthBarManager HBarMan {  get { return _hBarMan; } }
     [SerializeField]
     private Allignment _side;
+    [SerializeField]
+    private Color _color;
     public List<Capturable> ObjectivesHeld { get; set; }
     public List<Upgrade> Upgrades { get; set; }
     public int Monies { get; set; }
+
+    public Color Color
+    {
+        get { return _color; }
+    }
 
     public Allignment Side
     {
