@@ -12,6 +12,8 @@ public class Spawner : MonoBehaviour {
     [SerializeField]
     private float spawnDelay = 6f;
     private float timeLeft;
+    [SerializeField]
+    private Material creepMaterial;
 
     public Team Team { get { return _team; } }
 
@@ -34,7 +36,7 @@ public class Spawner : MonoBehaviour {
         {
             GameObject newObj = Instantiate(creepFab, lane.SpawnTrans.position, Quaternion.identity) as GameObject;
             newObj.layer = gameObject.layer;
-            newObj.GetComponent<Renderer>().material = GetComponent<Renderer>().material;
+            newObj.GetComponent<Renderer>().material = creepMaterial;
             Creep newCreep = newObj.GetComponent<Creep>();
             newCreep.Init(lane.Waypoints, _team);
             timeLeft = spawnDelay;
