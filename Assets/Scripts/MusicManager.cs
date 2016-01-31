@@ -37,13 +37,13 @@ public class MusicManager : MonoBehaviour {
         {
             StartCoroutine(FadeOut(firstLayer));
             StartCoroutine(FadeOut(secondLayer));
-            franticLayer.volume = 1;
+            franticLayer.Play();
         }
         else if (!Frantic && firstLayer.volume != 1 && !fadingIn)
         {
             StartCoroutine(FadeIn(firstLayer));
             StartCoroutine(FadeIn(secondLayer));
-            franticLayer.volume = 0;
+            franticLayer.Stop();
         }
     }
 
