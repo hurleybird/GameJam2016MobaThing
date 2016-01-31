@@ -43,7 +43,7 @@ public class MusicManager : MonoBehaviour {
         {
             StartCoroutine(FadeIn(firstLayer));
             StartCoroutine(FadeIn(secondLayer));
-            franticLayer.Stop();
+            franticLayer.Stop();    
         }
     }
 

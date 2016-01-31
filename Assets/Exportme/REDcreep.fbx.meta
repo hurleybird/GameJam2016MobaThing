@@ -1,0 +1,575 @@
+fileFormatVersion: 2
+guid: 54e900f0ccf5aa24b81ae60fb97144f8
+timeCreated: 1454278111
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: COG
+    100002: ControlHIpnull
+    100004: ControlHips
+    100006: CONTROLS
+    100008: Face:Actor
+    100010: Face:Face
+    100012: Face:Fit
+    100014: Face:PickPoints
+    100016: GeoBasicman
+    100018: GlobalSRT
+    100020: head
+    100022: HeadEffector
+    100024: JawBone
+    100026: JawEff
+    100028: LArmEffector
+    100030: LArmRoot
+    100032: LArmUpVector
+    100034: LBicept
+    100036: Leftcontrol
+    100038: LFoot
+    100040: LFootRoot
+    100042: LForearm
+    100044: LHand
+    100046: LHandEffector
+    100048: LHandRoot
+    100050: LIndex1
+    100052: LIndex2
+    100054: LIndex3
+    100056: LIndexEffector
+    100058: LIndexRoot
+    100060: LLegEffector
+    100062: LLegRoot
+    100064: LLegUpVector
+    100066: LMiddle1
+    100068: LMiddle2
+    100070: LMiddle3
+    100072: LMiddleEffector
+    100074: LMiddleRoot
+    100076: LowJaw
+    100078: LPinky1
+    100080: LPinky2
+    100082: LPinky3
+    100084: LPinkyEffector
+    100086: LPinkyRoot
+    100088: LRing1
+    100090: LRing2
+    100092: LRing3
+    100094: LRingEffector
+    100096: LRingRoot
+    100098: LShin
+    100100: LShoulder
+    100102: LShoulderEffector
+    100104: LShoulderRoot
+    100106: LThigh
+    100108: LThumb1
+    100110: LThumb2
+    100112: LThumb3
+    100114: LThumbEffector
+    100116: LThumbRoot
+    100118: LToe
+    100120: LToeEffector
+    100122: neck
+    100124: NeckRoot
+    100126: null2
+    100128: RArmEffector
+    100130: RArmRoot
+    100132: RArmUpVector
+    100134: RBicept
+    100136: //RootNode
+    100138: RFoot
+    100140: RFootRoot
+    100142: RForearm
+    100144: RHand
+    100146: RHandEffector
+    100148: RHandRoot
+    100150: Rightfootcontrol
+    100152: Rightfootnull
+    100154: RIndex1
+    100156: RIndex2
+    100158: RIndex3
+    100160: RIndexEffector
+    100162: RIndexRoot
+    100164: RLegEffector
+    100166: RLegRoot
+    100168: RLegUpVector
+    100170: RMiddle1
+    100172: RMiddle2
+    100174: RMiddle3
+    100176: RMiddleEffector
+    100178: RMiddleRoot
+    100180: RPinky1
+    100182: RPinky2
+    100184: RPinky3
+    100186: RPinkyEffector
+    100188: RPinkyRoot
+    100190: RRing1
+    100192: RRing2
+    100194: RRing3
+    100196: RRingEffector
+    100198: RRingRoot
+    100200: RShin
+    100202: RShoulder
+    100204: RShoulderEffector
+    100206: RShoulderRoot
+    100208: RThigh
+    100210: RThumb1
+    100212: RThumb2
+    100214: RThumb3
+    100216: RThumbEffector
+    100218: RThumbRoot
+    100220: RToe
+    100222: RToeEffector
+    100224: Skeleton
+    100226: Spine01
+    100228: Spine02
+    100230: Spine03
+    100232: SpineEffector
+    100234: SpineRoot
+    400000: COG
+    400002: ControlHIpnull
+    400004: ControlHips
+    400006: CONTROLS
+    400008: Face:Actor
+    400010: Face:Face
+    400012: Face:Fit
+    400014: Face:PickPoints
+    400016: GeoBasicman
+    400018: GlobalSRT
+    400020: head
+    400022: HeadEffector
+    400024: JawBone
+    400026: JawEff
+    400028: LArmEffector
+    400030: LArmRoot
+    400032: LArmUpVector
+    400034: LBicept
+    400036: Leftcontrol
+    400038: LFoot
+    400040: LFootRoot
+    400042: LForearm
+    400044: LHand
+    400046: LHandEffector
+    400048: LHandRoot
+    400050: LIndex1
+    400052: LIndex2
+    400054: LIndex3
+    400056: LIndexEffector
+    400058: LIndexRoot
+    400060: LLegEffector
+    400062: LLegRoot
+    400064: LLegUpVector
+    400066: LMiddle1
+    400068: LMiddle2
+    400070: LMiddle3
+    400072: LMiddleEffector
+    400074: LMiddleRoot
+    400076: LowJaw
+    400078: LPinky1
+    400080: LPinky2
+    400082: LPinky3
+    400084: LPinkyEffector
+    400086: LPinkyRoot
+    400088: LRing1
+    400090: LRing2
+    400092: LRing3
+    400094: LRingEffector
+    400096: LRingRoot
+    400098: LShin
+    400100: LShoulder
+    400102: LShoulderEffector
+    400104: LShoulderRoot
+    400106: LThigh
+    400108: LThumb1
+    400110: LThumb2
+    400112: LThumb3
+    400114: LThumbEffector
+    400116: LThumbRoot
+    400118: LToe
+    400120: LToeEffector
+    400122: neck
+    400124: NeckRoot
+    400126: null2
+    400128: RArmEffector
+    400130: RArmRoot
+    400132: RArmUpVector
+    400134: RBicept
+    400136: //RootNode
+    400138: RFoot
+    400140: RFootRoot
+    400142: RForearm
+    400144: RHand
+    400146: RHandEffector
+    400148: RHandRoot
+    400150: Rightfootcontrol
+    400152: Rightfootnull
+    400154: RIndex1
+    400156: RIndex2
+    400158: RIndex3
+    400160: RIndexEffector
+    400162: RIndexRoot
+    400164: RLegEffector
+    400166: RLegRoot
+    400168: RLegUpVector
+    400170: RMiddle1
+    400172: RMiddle2
+    400174: RMiddle3
+    400176: RMiddleEffector
+    400178: RMiddleRoot
+    400180: RPinky1
+    400182: RPinky2
+    400184: RPinky3
+    400186: RPinkyEffector
+    400188: RPinkyRoot
+    400190: RRing1
+    400192: RRing2
+    400194: RRing3
+    400196: RRingEffector
+    400198: RRingRoot
+    400200: RShin
+    400202: RShoulder
+    400204: RShoulderEffector
+    400206: RShoulderRoot
+    400208: RThigh
+    400210: RThumb1
+    400212: RThumb2
+    400214: RThumb3
+    400216: RThumbEffector
+    400218: RThumbRoot
+    400220: RToe
+    400222: RToeEffector
+    400224: Skeleton
+    400226: Spine01
+    400228: Spine02
+    400230: Spine03
+    400232: SpineEffector
+    400234: SpineRoot
+    4300000: GeoBasicman
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: GeoBasicman
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Face:Face
+        weight: 1
+      - path: Face:Face/Face:Actor
+        weight: 1
+      - path: Face:Face/Face:Fit
+        weight: 1
+      - path: Face:Face/Face:PickPoints
+        weight: 1
+      - path: GeoBasicman
+        weight: 1
+      - path: Skeleton
+        weight: 1
+      - path: Skeleton/GlobalSRT
+        weight: 1
+      - path: Skeleton/GlobalSRT/ControlHips
+        weight: 1
+      - path: Skeleton/GlobalSRT/ControlHips/ControlHIpnull
+        weight: 1
+      - path: Skeleton/GlobalSRT/CONTROLS
+        weight: 1
+      - path: Skeleton/GlobalSRT/CONTROLS/COG
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LIndexRoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LIndexRoot/LIndex1
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LIndexRoot/LIndex1/LIndex2
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LIndexRoot/LIndex1/LIndex2/LIndex3
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LIndexRoot/LIndexEffector
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LMiddleRoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LMiddleRoot/LMiddle1
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LMiddleRoot/LMiddle1/LMiddle2
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LMiddleRoot/LMiddle1/LMiddle2/LMiddle3
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LMiddleRoot/LMiddleEffector
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LPinkyRoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LPinkyRoot/LPinky1
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LPinkyRoot/LPinky1/LPinky2
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LPinkyRoot/LPinky1/LPinky2/LPinky3
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LPinkyRoot/LPinkyEffector
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LRingRoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LRingRoot/LRing1
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LRingRoot/LRing1/LRing2
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LRingRoot/LRing1/LRing2/LRing3
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LRingRoot/LRingEffector
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LThumbRoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LThumbRoot/LThumb1
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LThumbRoot/LThumb1/LThumb2
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LThumbRoot/LThumb1/LThumb2/LThumb3
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LThumbRoot/LThumbEffector
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHandEffector
+        weight: 1
+      - path: Skeleton/GlobalSRT/Leftcontrol
+        weight: 1
+      - path: Skeleton/GlobalSRT/Leftcontrol/null2
+        weight: 1
+      - path: Skeleton/GlobalSRT/LLegEffector
+        weight: 1
+      - path: Skeleton/GlobalSRT/LLegEffector/LFootRoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/LLegEffector/LFootRoot/LFoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/LLegEffector/LFootRoot/LFoot/LToe
+        weight: 1
+      - path: Skeleton/GlobalSRT/LLegEffector/LFootRoot/LToeEffector
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RIndexRoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RIndexRoot/RIndex1
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RIndexRoot/RIndex1/RIndex2
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RIndexRoot/RIndex1/RIndex2/RIndex3
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RIndexRoot/RIndexEffector
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RMiddleRoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RMiddleRoot/RMiddle1
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RMiddleRoot/RMiddle1/RMiddle2
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RMiddleRoot/RMiddle1/RMiddle2/RMiddle3
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RMiddleRoot/RMiddleEffector
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RPinkyRoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RPinkyRoot/RPinky1
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RPinkyRoot/RPinky1/RPinky2
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RPinkyRoot/RPinky1/RPinky2/RPinky3
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RPinkyRoot/RPinkyEffector
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RRingRoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RRingRoot/RRing1
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RRingRoot/RRing1/RRing2
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RRingRoot/RRing1/RRing2/RRing3
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RRingRoot/RRingEffector
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RThumbRoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RThumbRoot/RThumb1
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RThumbRoot/RThumb1/RThumb2
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RThumbRoot/RThumb1/RThumb2/RThumb3
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RThumbRoot/RThumbEffector
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHandEffector
+        weight: 1
+      - path: Skeleton/GlobalSRT/Rightfootcontrol
+        weight: 1
+      - path: Skeleton/GlobalSRT/Rightfootcontrol/Rightfootnull
+        weight: 1
+      - path: Skeleton/GlobalSRT/RLegEffector
+        weight: 1
+      - path: Skeleton/GlobalSRT/RLegEffector/RFootRoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/RLegEffector/RFootRoot/RFoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/RLegEffector/RFootRoot/RFoot/RToe
+        weight: 1
+      - path: Skeleton/GlobalSRT/RLegEffector/RFootRoot/RToeEffector
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/LLegRoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/LLegRoot/LThigh
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/LLegRoot/LThigh/LShin
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/LLegUpVector
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/RLegRoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/RLegRoot/RThigh
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/RLegRoot/RThigh/RShin
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/RLegUpVector
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/Spine01
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/Spine01/Spine02
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/Spine01/Spine02/Spine03
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/SpineEffector
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/SpineEffector/LShoulderRoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/SpineEffector/LShoulderRoot/LShoulder
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/SpineEffector/LShoulderRoot/LShoulderEffector
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/SpineEffector/LShoulderRoot/LShoulderEffector/LArmRoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/SpineEffector/LShoulderRoot/LShoulderEffector/LArmRoot/LArmUpVector
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/SpineEffector/LShoulderRoot/LShoulderEffector/LArmRoot/LBicept
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/SpineEffector/LShoulderRoot/LShoulderEffector/LArmRoot/LBicept/LForearm
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/SpineEffector/NeckRoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/SpineEffector/NeckRoot/HeadEffector
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/SpineEffector/NeckRoot/neck
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/SpineEffector/NeckRoot/neck/head
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/SpineEffector/NeckRoot/neck/head/LowJaw
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/SpineEffector/NeckRoot/neck/head/LowJaw/JawBone
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/SpineEffector/NeckRoot/neck/head/LowJaw/JawEff
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/SpineEffector/RShoulderRoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/SpineEffector/RShoulderRoot/RShoulder
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/SpineEffector/RShoulderRoot/RShoulderEffector
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/SpineEffector/RShoulderRoot/RShoulderEffector/RArmRoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/SpineEffector/RShoulderRoot/RShoulderEffector/RArmRoot/RArmUpVector
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/SpineEffector/RShoulderRoot/RShoulderEffector/RArmRoot/RBicept
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/SpineEffector/RShoulderRoot/RShoulderEffector/RArmRoot/RBicept/RForearm
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

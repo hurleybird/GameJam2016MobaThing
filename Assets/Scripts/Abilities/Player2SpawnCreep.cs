@@ -9,7 +9,7 @@ public class Player2SpawnCreep : Ability
     protected override void FireSecondPart(GameObject newObj, Team team)
     {
         newObj.layer = gameObject.layer;
-        newObj.GetComponent<Renderer>().material = GetComponent<Renderer>().material;
+        //newObj.GetComponent<Renderer>().material = GetComponent<Renderer>().material;
         Creep newCreep = newObj.GetComponent<Creep>();
         newCreep.Init(Waypoints, team);
     }

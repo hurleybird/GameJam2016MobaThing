@@ -4,6 +4,8 @@ using System.Collections.Generic;
 
 public class Creep : MonoBehaviour {
 
+    public Renderer foo;
+
     private List<Transform> waypoints = new List<Transform>();
     private int waypointIndex = 0;
     [SerializeField]

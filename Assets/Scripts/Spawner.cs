@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 public class Spawner : MonoBehaviour {
 
+    public bool loadRed;
+    public Material red;
+
     [SerializeField]
     private Team _team;
     [SerializeField]
@@ -36,8 +39,12 @@ public class Spawner : MonoBehaviour {
         {
             GameObject newObj = Instantiate(creepFab, lane.SpawnTrans.position, Quaternion.identity) as GameObject;
             newObj.layer = gameObject.layer;
-            newObj.GetComponent<Renderer>().material = creepMaterial;
+            //newObj.GetComponent<Renderer>().material = creepMaterial;
             Creep newCreep = newObj.GetComponent<Creep>();
+            if (loadRed)
+            {
+                newCreep.foo.material = red;
+            }
             newCreep.Init(lane.Waypoints, _team);
             timeLeft = spawnDelay;
         }

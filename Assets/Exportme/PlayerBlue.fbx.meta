@@ -1,0 +1,749 @@
+fileFormatVersion: 2
+guid: bdf72d646ff526c4885a795c4e3fb8a9
+timeCreated: 1454278140
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: COG
+    100002: ControlHIpnull
+    100004: ControlHips
+    100006: CONTROLS
+    100008: Face:Actor
+    100010: Face:Face
+    100012: Face:Fit
+    100014: Face:PickPoints
+    100016: GeoBasicman
+    100018: Geoclothwiz
+    100020: GeoMask
+    100022: GlobalSRT
+    100024: grid
+    100026: grid1
+    100028: grid10
+    100030: grid11
+    100032: grid11_NeutralPose
+    100034: grid12
+    100036: grid12_NeutralPose
+    100038: grid13
+    100040: grid13_NeutralPose
+    100042: grid14
+    100044: grid15
+    100046: grid16
+    100048: grid17
+    100050: grid18
+    100052: grid18_NeutralPose
+    100054: grid19
+    100056: grid19_NeutralPose
+    100058: grid2
+    100060: grid20
+    100062: grid20_NeutralPose
+    100064: grid3
+    100066: grid4
+    100068: grid4_NeutralPose
+    100070: grid5
+    100072: grid5_NeutralPose
+    100074: grid6
+    100076: grid6_NeutralPose
+    100078: grid7
+    100080: grid8
+    100082: grid9
+    100084: head
+    100086: HeadEffector
+    100088: JawBone
+    100090: JawEff
+    100092: LArmEffector
+    100094: LArmRoot
+    100096: LArmUpVector
+    100098: LBicept
+    100100: Leftcontrol
+    100102: LFoot
+    100104: LFootRoot
+    100106: LForearm
+    100108: LHand
+    100110: LHandEffector
+    100112: LHandRoot
+    100114: LIndex1
+    100116: LIndex2
+    100118: LIndex3
+    100120: LIndexEffector
+    100122: LIndexRoot
+    100124: LLegEffector
+    100126: LLegRoot
+    100128: LLegUpVector
+    100130: LMiddle1
+    100132: LMiddle2
+    100134: LMiddle3
+    100136: LMiddleEffector
+    100138: LMiddleRoot
+    100140: LowJaw
+    100142: LPinky1
+    100144: LPinky2
+    100146: LPinky3
+    100148: LPinkyEffector
+    100150: LPinkyRoot
+    100152: LRing1
+    100154: LRing2
+    100156: LRing3
+    100158: LRingEffector
+    100160: LRingRoot
+    100162: LShin
+    100164: LShoulder
+    100166: LShoulderEffector
+    100168: LShoulderRoot
+    100170: LThigh
+    100172: LThumb1
+    100174: LThumb2
+    100176: LThumb3
+    100178: LThumbEffector
+    100180: LThumbRoot
+    100182: LToe
+    100184: LToeEffector
+    100186: neck
+    100188: NeckRoot
+    100190: null2
+    100192: //RootNode
+    100194: RArmEffector
+    100196: RArmRoot
+    100198: RArmUpVector
+    100200: RBicept
+    100202: RFoot
+    100204: RFootRoot
+    100206: RForearm
+    100208: RHand
+    100210: RHandEffector
+    100212: RHandRoot
+    100214: Rightfootcontrol
+    100216: Rightfootnull
+    100218: RIndex1
+    100220: RIndex2
+    100222: RIndex3
+    100224: RIndexEffector
+    100226: RIndexRoot
+    100228: RLegEffector
+    100230: RLegRoot
+    100232: RLegUpVector
+    100234: RMiddle1
+    100236: RMiddle2
+    100238: RMiddle3
+    100240: RMiddleEffector
+    100242: RMiddleRoot
+    100244: RPinky1
+    100246: RPinky2
+    100248: RPinky3
+    100250: RPinkyEffector
+    100252: RPinkyRoot
+    100254: RRing1
+    100256: RRing2
+    100258: RRing3
+    100260: RRingEffector
+    100262: RRingRoot
+    100264: RShin
+    100266: RShoulder
+    100268: RShoulderEffector
+    100270: RShoulderRoot
+    100272: RThigh
+    100274: RThumb1
+    100276: RThumb2
+    100278: RThumb3
+    100280: RThumbEffector
+    100282: RThumbRoot
+    100284: RToe
+    100286: RToeEffector
+    100288: Skeleton
+    100290: Spine01
+    100292: Spine02
+    100294: Spine03
+    100296: SpineEffector
+    100298: SpineRoot
+    400000: COG
+    400002: ControlHIpnull
+    400004: ControlHips
+    400006: CONTROLS
+    400008: Face:Actor
+    400010: Face:Face
+    400012: Face:Fit
+    400014: Face:PickPoints
+    400016: GeoBasicman
+    400018: Geoclothwiz
+    400020: GeoMask
+    400022: GlobalSRT
+    400024: grid
+    400026: grid1
+    400028: grid10
+    400030: grid11
+    400032: grid11_NeutralPose
+    400034: grid12
+    400036: grid12_NeutralPose
+    400038: grid13
+    400040: grid13_NeutralPose
+    400042: grid14
+    400044: grid15
+    400046: grid16
+    400048: grid17
+    400050: grid18
+    400052: grid18_NeutralPose
+    400054: grid19
+    400056: grid19_NeutralPose
+    400058: grid2
+    400060: grid20
+    400062: grid20_NeutralPose
+    400064: grid3
+    400066: grid4
+    400068: grid4_NeutralPose
+    400070: grid5
+    400072: grid5_NeutralPose
+    400074: grid6
+    400076: grid6_NeutralPose
+    400078: grid7
+    400080: grid8
+    400082: grid9
+    400084: head
+    400086: HeadEffector
+    400088: JawBone
+    400090: JawEff
+    400092: LArmEffector
+    400094: LArmRoot
+    400096: LArmUpVector
+    400098: LBicept
+    400100: Leftcontrol
+    400102: LFoot
+    400104: LFootRoot
+    400106: LForearm
+    400108: LHand
+    400110: LHandEffector
+    400112: LHandRoot
+    400114: LIndex1
+    400116: LIndex2
+    400118: LIndex3
+    400120: LIndexEffector
+    400122: LIndexRoot
+    400124: LLegEffector
+    400126: LLegRoot
+    400128: LLegUpVector
+    400130: LMiddle1
+    400132: LMiddle2
+    400134: LMiddle3
+    400136: LMiddleEffector
+    400138: LMiddleRoot
+    400140: LowJaw
+    400142: LPinky1
+    400144: LPinky2
+    400146: LPinky3
+    400148: LPinkyEffector
+    400150: LPinkyRoot
+    400152: LRing1
+    400154: LRing2
+    400156: LRing3
+    400158: LRingEffector
+    400160: LRingRoot
+    400162: LShin
+    400164: LShoulder
+    400166: LShoulderEffector
+    400168: LShoulderRoot
+    400170: LThigh
+    400172: LThumb1
+    400174: LThumb2
+    400176: LThumb3
+    400178: LThumbEffector
+    400180: LThumbRoot
+    400182: LToe
+    400184: LToeEffector
+    400186: neck
+    400188: NeckRoot
+    400190: null2
+    400192: //RootNode
+    400194: RArmEffector
+    400196: RArmRoot
+    400198: RArmUpVector
+    400200: RBicept
+    400202: RFoot
+    400204: RFootRoot
+    400206: RForearm
+    400208: RHand
+    400210: RHandEffector
+    400212: RHandRoot
+    400214: Rightfootcontrol
+    400216: Rightfootnull
+    400218: RIndex1
+    400220: RIndex2
+    400222: RIndex3
+    400224: RIndexEffector
+    400226: RIndexRoot
+    400228: RLegEffector
+    400230: RLegRoot
+    400232: RLegUpVector
+    400234: RMiddle1
+    400236: RMiddle2
+    400238: RMiddle3
+    400240: RMiddleEffector
+    400242: RMiddleRoot
+    400244: RPinky1
+    400246: RPinky2
+    400248: RPinky3
+    400250: RPinkyEffector
+    400252: RPinkyRoot
+    400254: RRing1
+    400256: RRing2
+    400258: RRing3
+    400260: RRingEffector
+    400262: RRingRoot
+    400264: RShin
+    400266: RShoulder
+    400268: RShoulderEffector
+    400270: RShoulderRoot
+    400272: RThigh
+    400274: RThumb1
+    400276: RThumb2
+    400278: RThumb3
+    400280: RThumbEffector
+    400282: RThumbRoot
+    400284: RToe
+    400286: RToeEffector
+    400288: Skeleton
+    400290: Spine01
+    400292: Spine02
+    400294: Spine03
+    400296: SpineEffector
+    400298: SpineRoot
+    4300000: GeoBasicman
+    4300002: GeoMask
+    4300004: grid
+    4300006: grid3
+    4300008: grid1
+    4300010: grid2
+    4300012: grid4
+    4300014: grid6
+    4300016: grid5
+    4300018: grid7
+    4300020: grid8
+    4300022: grid9
+    4300024: grid10
+    4300026: grid11
+    4300028: grid12
+    4300030: grid13
+    4300032: grid14
+    4300034: grid15
+    4300036: grid16
+    4300038: grid17
+    4300040: grid18
+    4300042: grid19
+    4300044: grid20
+    4300046: Geoclothwiz
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: GeoBasicman
+    13700002: Geoclothwiz
+    13700004: GeoMask
+    13700006: grid
+    13700008: grid1
+    13700010: grid10
+    13700012: grid11
+    13700014: grid12
+    13700016: grid13
+    13700018: grid14
+    13700020: grid15
+    13700022: grid16
+    13700024: grid17
+    13700026: grid18
+    13700028: grid19
+    13700030: grid2
+    13700032: grid20
+    13700034: grid3
+    13700036: grid4
+    13700038: grid5
+    13700040: grid6
+    13700042: grid7
+    13700044: grid8
+    13700046: grid9
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Face:Face
+        weight: 1
+      - path: Face:Face/Face:Actor
+        weight: 1
+      - path: Face:Face/Face:Fit
+        weight: 1
+      - path: Face:Face/Face:PickPoints
+        weight: 1
+      - path: GeoBasicman
+        weight: 1
+      - path: GeoBasicman/Geoclothwiz
+        weight: 1
+      - path: GeoBasicman/GeoMask
+        weight: 1
+      - path: GeoBasicman/grid
+        weight: 1
+      - path: GeoBasicman/grid/grid1
+        weight: 1
+      - path: GeoBasicman/grid/grid2
+        weight: 1
+      - path: GeoBasicman/grid/grid3
+        weight: 1
+      - path: GeoBasicman/grid/grid4_NeutralPose
+        weight: 1
+      - path: GeoBasicman/grid/grid4_NeutralPose/grid4
+        weight: 1
+      - path: GeoBasicman/grid/grid5_NeutralPose
+        weight: 1
+      - path: GeoBasicman/grid/grid5_NeutralPose/grid5
+        weight: 1
+      - path: GeoBasicman/grid/grid6_NeutralPose
+        weight: 1
+      - path: GeoBasicman/grid/grid6_NeutralPose/grid6
+        weight: 1
+      - path: GeoBasicman/grid7
+        weight: 1
+      - path: GeoBasicman/grid7/grid8
+        weight: 1
+      - path: GeoBasicman/grid7/grid9
+        weight: 1
+      - path: GeoBasicman/grid7/grid10
+        weight: 1
+      - path: GeoBasicman/grid7/grid11_NeutralPose
+        weight: 1
+      - path: GeoBasicman/grid7/grid11_NeutralPose/grid11
+        weight: 1
+      - path: GeoBasicman/grid7/grid12_NeutralPose
+        weight: 1
+      - path: GeoBasicman/grid7/grid12_NeutralPose/grid12
+        weight: 1
+      - path: GeoBasicman/grid7/grid13_NeutralPose
+        weight: 1
+      - path: GeoBasicman/grid7/grid13_NeutralPose/grid13
+        weight: 1
+      - path: GeoBasicman/grid14
+        weight: 1
+      - path: GeoBasicman/grid14/grid15
+        weight: 1
+      - path: GeoBasicman/grid14/grid16
+        weight: 1
+      - path: GeoBasicman/grid14/grid17
+        weight: 1
+      - path: GeoBasicman/grid14/grid18_NeutralPose
+        weight: 1
+      - path: GeoBasicman/grid14/grid18_NeutralPose/grid18
+        weight: 1
+      - path: GeoBasicman/grid14/grid19_NeutralPose
+        weight: 1
+      - path: GeoBasicman/grid14/grid19_NeutralPose/grid19
+        weight: 1
+      - path: GeoBasicman/grid14/grid20_NeutralPose
+        weight: 1
+      - path: GeoBasicman/grid14/grid20_NeutralPose/grid20
+        weight: 1
+      - path: Skeleton
+        weight: 1
+      - path: Skeleton/GlobalSRT
+        weight: 1
+      - path: Skeleton/GlobalSRT/ControlHips
+        weight: 1
+      - path: Skeleton/GlobalSRT/ControlHips/ControlHIpnull
+        weight: 1
+      - path: Skeleton/GlobalSRT/CONTROLS
+        weight: 1
+      - path: Skeleton/GlobalSRT/CONTROLS/COG
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LIndexRoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LIndexRoot/LIndex1
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LIndexRoot/LIndex1/LIndex2
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LIndexRoot/LIndex1/LIndex2/LIndex3
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LIndexRoot/LIndexEffector
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LMiddleRoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LMiddleRoot/LMiddle1
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LMiddleRoot/LMiddle1/LMiddle2
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LMiddleRoot/LMiddle1/LMiddle2/LMiddle3
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LMiddleRoot/LMiddleEffector
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LPinkyRoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LPinkyRoot/LPinky1
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LPinkyRoot/LPinky1/LPinky2
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LPinkyRoot/LPinky1/LPinky2/LPinky3
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LPinkyRoot/LPinkyEffector
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LRingRoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LRingRoot/LRing1
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LRingRoot/LRing1/LRing2
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LRingRoot/LRing1/LRing2/LRing3
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LRingRoot/LRingEffector
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LThumbRoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LThumbRoot/LThumb1
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LThumbRoot/LThumb1/LThumb2
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LThumbRoot/LThumb1/LThumb2/LThumb3
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHand/LThumbRoot/LThumbEffector
+        weight: 1
+      - path: Skeleton/GlobalSRT/LArmEffector/LHandRoot/LHandEffector
+        weight: 1
+      - path: Skeleton/GlobalSRT/Leftcontrol
+        weight: 1
+      - path: Skeleton/GlobalSRT/Leftcontrol/null2
+        weight: 1
+      - path: Skeleton/GlobalSRT/LLegEffector
+        weight: 1
+      - path: Skeleton/GlobalSRT/LLegEffector/LFootRoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/LLegEffector/LFootRoot/LFoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/LLegEffector/LFootRoot/LFoot/LToe
+        weight: 1
+      - path: Skeleton/GlobalSRT/LLegEffector/LFootRoot/LToeEffector
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RIndexRoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RIndexRoot/RIndex1
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RIndexRoot/RIndex1/RIndex2
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RIndexRoot/RIndex1/RIndex2/RIndex3
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RIndexRoot/RIndexEffector
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RMiddleRoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RMiddleRoot/RMiddle1
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RMiddleRoot/RMiddle1/RMiddle2
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RMiddleRoot/RMiddle1/RMiddle2/RMiddle3
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RMiddleRoot/RMiddleEffector
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RPinkyRoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RPinkyRoot/RPinky1
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RPinkyRoot/RPinky1/RPinky2
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RPinkyRoot/RPinky1/RPinky2/RPinky3
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RPinkyRoot/RPinkyEffector
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RRingRoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RRingRoot/RRing1
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RRingRoot/RRing1/RRing2
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RRingRoot/RRing1/RRing2/RRing3
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RRingRoot/RRingEffector
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RThumbRoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RThumbRoot/RThumb1
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RThumbRoot/RThumb1/RThumb2
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RThumbRoot/RThumb1/RThumb2/RThumb3
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHand/RThumbRoot/RThumbEffector
+        weight: 1
+      - path: Skeleton/GlobalSRT/RArmEffector/RHandRoot/RHandEffector
+        weight: 1
+      - path: Skeleton/GlobalSRT/Rightfootcontrol
+        weight: 1
+      - path: Skeleton/GlobalSRT/Rightfootcontrol/Rightfootnull
+        weight: 1
+      - path: Skeleton/GlobalSRT/RLegEffector
+        weight: 1
+      - path: Skeleton/GlobalSRT/RLegEffector/RFootRoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/RLegEffector/RFootRoot/RFoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/RLegEffector/RFootRoot/RFoot/RToe
+        weight: 1
+      - path: Skeleton/GlobalSRT/RLegEffector/RFootRoot/RToeEffector
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/LLegRoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/LLegRoot/LThigh
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/LLegRoot/LThigh/LShin
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/LLegUpVector
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/RLegRoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/RLegRoot/RThigh
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/RLegRoot/RThigh/RShin
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/RLegUpVector
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/Spine01
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/Spine01/Spine02
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/Spine01/Spine02/Spine03
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/SpineEffector
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/SpineEffector/LShoulderRoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/SpineEffector/LShoulderRoot/LShoulder
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/SpineEffector/LShoulderRoot/LShoulderEffector
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/SpineEffector/LShoulderRoot/LShoulderEffector/LArmRoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/SpineEffector/LShoulderRoot/LShoulderEffector/LArmRoot/LArmUpVector
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/SpineEffector/LShoulderRoot/LShoulderEffector/LArmRoot/LBicept
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/SpineEffector/LShoulderRoot/LShoulderEffector/LArmRoot/LBicept/LForearm
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/SpineEffector/NeckRoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/SpineEffector/NeckRoot/HeadEffector
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/SpineEffector/NeckRoot/neck
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/SpineEffector/NeckRoot/neck/head
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/SpineEffector/NeckRoot/neck/head/LowJaw
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/SpineEffector/NeckRoot/neck/head/LowJaw/JawBone
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/SpineEffector/NeckRoot/neck/head/LowJaw/JawEff
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/SpineEffector/RShoulderRoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/SpineEffector/RShoulderRoot/RShoulder
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/SpineEffector/RShoulderRoot/RShoulderEffector
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/SpineEffector/RShoulderRoot/RShoulderEffector/RArmRoot
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/SpineEffector/RShoulderRoot/RShoulderEffector/RArmRoot/RArmUpVector
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/SpineEffector/RShoulderRoot/RShoulderEffector/RArmRoot/RBicept
+        weight: 1
+      - path: Skeleton/GlobalSRT/SpineRoot/SpineEffector/RShoulderRoot/RShoulderEffector/RArmRoot/RBicept/RForearm
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
