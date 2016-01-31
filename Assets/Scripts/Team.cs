@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-public enum Upgrade : int { None = 0, One = 1, Two = 2, Three = 3 }
+public enum Upgrade : int { None = 0, One = 1, Two = 2, Three = 3, Four = 4, Five = 5 }
 public enum UpgradeType : int { Attack = 0, Health = 1, Speed = 2 }
 
 public class Team : MonoBehaviour {
@@ -90,6 +90,14 @@ public class Team : MonoBehaviour {
         else if (Upgrades[(int)type] == Upgrade.Two)
         {
             return 300;
+        }
+        else if (Upgrades[(int)type] == Upgrade.Three)
+        {
+            return 400;
+        }
+        else if (Upgrades[(int)type] == Upgrade.Four)
+        {
+            return 500;
         }
         else return null;
     }

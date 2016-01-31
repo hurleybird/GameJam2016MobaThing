@@ -30,6 +30,12 @@ public class BuyButton : MonoBehaviour {
                 text.text = "Tier 3 (300 gold)";
                 break;
             case Upgrade.Three:
+                text.text = "Tier 4 (400 gold)";
+                break;
+            case Upgrade.Four:
+                text.text = "Tier 5 (500 gold)";
+                break;
+            case Upgrade.Five:
                 text.text = "Maxed";
                 break;
         }

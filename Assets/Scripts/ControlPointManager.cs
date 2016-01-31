@@ -67,7 +67,7 @@ public class ControlPointManager : MonoBehaviour {
                 count.text = timeLeft.ToString();
 
             }
-            else if (cPoints.TrueForAll(x => x.Team == team1))
+            else if (cPoints.TrueForAll(x => x.Team == team2))
             {
                 if (timeLeft == 0)
                 {
