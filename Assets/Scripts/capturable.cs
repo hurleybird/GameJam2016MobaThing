@@ -1,8 +1,11 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 
 public class Capturable : MonoBehaviour 
 {
+    public event Action OnAllignmentChange;
+
     [SerializeField]
     private Material neutralMat;
     [SerializeField]
@@ -89,10 +92,12 @@ public class Capturable : MonoBehaviour
         if (capturePoints >= captureTrigger)
         {
             Team = player2.Team;
+            OnAllignmentChange();
         }
         else if (capturePoints <= -captureTrigger)
         {
             Team = player1.Team;
+            OnAllignmentChange();
         }
         else if (capturePoints > -0.01f && capturePoints < 0.01f)
         {
