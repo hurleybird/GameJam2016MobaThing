@@ -45,7 +45,7 @@ public class Creep : MonoBehaviour {
     {
 
         aggro = null;
-        RaycastHit[] hits = Physics.BoxCastAll(transform.position, new Vector3(10, 10, 10), Vector3.forward, Quaternion.identity, 100f, mask.value);
+        RaycastHit[] hits = Physics.BoxCastAll(transform.position, new Vector3(10, 10, 10), Vector3.forward, Quaternion.identity, 10f, mask.value);
 
         float minDistance = float.MaxValue;
 
@@ -81,7 +81,7 @@ public class Creep : MonoBehaviour {
 
         if (aggro != null && targetDistance > 5f)
             rBody.AddForce(transform.forward * movementRate * Team.GetSpeedMult());
-        else if (aggro == null && targetDistance > 1f)
+        else if (aggro == null && targetDistance > 3f)
             rBody.AddForce(transform.forward * movementRate * Team.GetSpeedMult());
         else if (waypointIndex < waypoints.Count - 1)
         {
