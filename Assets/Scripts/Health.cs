@@ -110,6 +110,6 @@ public class Health : MonoBehaviour {
         if (availiableSounds == null)
             return;
         int soundIndexToPlay = UnityEngine.Random.Range(0, availiableSounds.Length + 1);
-        SoundPointManager.Instance.PlaySoundAtPoint(transform.position, availiableSounds[soundIndexToPlay]);
+        //SoundPointManager.Instance.PlaySoundAtPoint(transform.position, availiableSounds[soundIndexToPlay]);
     }
 }
