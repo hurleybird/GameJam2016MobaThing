@@ -18,6 +18,12 @@ public class GameOver : Singleton<GameOver> {
         StartCoroutine(Finish());
     }
 
+    public void Update()
+    {
+        if (Input.GetKey(KeyCode.Escape))
+            SceneManager.LoadScene("Menu");
+    }
+
     IEnumerator Finish()
     {
         yield return new WaitForSeconds(3.5f);
