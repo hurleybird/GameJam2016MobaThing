@@ -37,7 +37,9 @@ public abstract class Ability : MonoBehaviour
     {
         GameObject newObj = Instantiate(toSpawn, spawnPoint.position, transform.rotation) as GameObject;
         newObj.gameObject.layer = gameObject.layer + 2;
-        newObj.GetComponent<Projectile>().Init(team);
+        Projectile newProjectile = newObj.GetComponent<Projectile>();
+        if (newProjectile != null)
+            newProjectile.Init(team);
         FireSecondPart();
     }
     protected abstract void FireSecondPart();
