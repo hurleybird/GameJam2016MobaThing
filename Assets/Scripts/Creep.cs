@@ -4,8 +4,6 @@ using System.Collections.Generic;
 
 public class Creep : MonoBehaviour {
 
-    public event Action<Transform> OnTargetInRange;
-
     private List<Transform> waypoints = new List<Transform>();
     private int waypointIndex = 0;
     [SerializeField]
@@ -41,7 +39,7 @@ public class Creep : MonoBehaviour {
     {
 
         aggro = null;
-        RaycastHit[] hits = Physics.BoxCastAll(transform.position, new Vector3(6, 6, 6), Vector3.forward, Quaternion.identity, 100f, mask.value);
+        RaycastHit[] hits = Physics.BoxCastAll(transform.position, new Vector3(10, 10, 10), Vector3.forward, Quaternion.identity, 100f, mask.value);
 
         float minDistance = float.MaxValue;
 
@@ -64,7 +62,7 @@ public class Creep : MonoBehaviour {
         if (aggro != null)
         {
             target = aggro;
-            OnTargetInRange(target);
+            attack.Activate(Team);
         }
         else
             target = waypoints[waypointIndex];

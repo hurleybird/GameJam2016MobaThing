@@ -24,7 +24,7 @@ public class Tower : MonoBehaviour {
     void Update()
     {
         Transform aggro = null;
-        RaycastHit[] hits = Physics.BoxCastAll(transform.position, new Vector3(20,20,20), Vector3.forward, Quaternion.identity, 100f, mask.value);
+        RaycastHit[] hits = Physics.BoxCastAll(transform.position, new Vector3(13,13,13), Vector3.forward, Quaternion.identity, 100f, mask.value);
 
         float minDistance = float.MaxValue;
 
