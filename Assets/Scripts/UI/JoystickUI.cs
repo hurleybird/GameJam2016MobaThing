@@ -48,9 +48,10 @@ public class JoystickUI : MonoBehaviour {
                 waitTime = coolDown;
             }
 
-            //buttons[Index].GetComponent<Image>().color = selectColor;
-
             var pointer = new PointerEventData(EventSystem.current); // pointer event for Execute
+
+            buttons.ForEach(x => ExecuteEvents.Execute(x.gameObject, pointer, ExecuteEvents.pointerExitHandler));
+
             ExecuteEvents.Execute(buttons[Index].gameObject, pointer, ExecuteEvents.pointerEnterHandler);
 
             if (Input.GetButtonDown(prefix + "Fire1")) // down: press
@@ -61,18 +62,6 @@ public class JoystickUI : MonoBehaviour {
                 ExecuteEvents.Execute(buttons[Index].gameObject, pointer, ExecuteEvents.pointerUpHandler);
                 ExecuteEvents.Execute(buttons[Index].gameObject, pointer, ExecuteEvents.pointerExitHandler);
                 ExecuteEvents.Execute(buttons[Index].gameObject, pointer, ExecuteEvents.submitHandler);
-            }
-
-
-           
-
-            if (Input.GetButtonDown(prefix + "Fire1")) // down: press
-            {
-                ExecuteEvents.Execute(buttons[Index].gameObject, pointer, ExecuteEvents.pointerDownHandler);
-            }
-            if (Input.GetButtonUp(prefix + "Fire1")) // up: release
-            {
-                ExecuteEvents.Execute(buttons[Index].gameObject, pointer, ExecuteEvents.pointerUpHandler);
             }
         }
 	}

@@ -7,6 +7,8 @@ public class CharacterController : MonoBehaviour {
     float movementRate = 0.1f;
     [SerializeField]
     float turnRate = 100f;
+    [SerializeField]
+    private GameObject shop;
     private Player player;
     private Rigidbody rBody;
     private string prefix = "";
@@ -21,6 +23,9 @@ public class CharacterController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+
+        if (shop.activeInHierarchy)
+            return;
 
         float xPos = Input.GetAxis(prefix + "Horizontal");
         float zPos = Input.GetAxis(prefix + "Vertical");
