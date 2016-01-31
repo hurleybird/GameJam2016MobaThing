@@ -16,9 +16,9 @@ public class PlayerRespawner : MonoBehaviour
     private GameObject rightPlayerRespawn;
 
     [SerializeField]
-    private GameObject leftPlayerUI;
+    private RespawnTimerUI leftPlayerUI;
     [SerializeField]
-    private GameObject rightPlayerUI;
+    private RespawnTimerUI rightPlayerUI;
 
 
 
@@ -55,14 +55,12 @@ public class PlayerRespawner : MonoBehaviour
         return player.GetComponent<Player>().Side;
     }
 
-    private void RespawnPlayer(GameObject player, GameObject respawnLocation, GameObject playerUIObject)
+    private void RespawnPlayer(GameObject player, GameObject respawnLocation, RespawnTimerUI playerUIObject)
     {
         player.transform.position = respawnLocation.transform.position;
         var playerRespawnerTimer = gameObject.AddComponent<RespawnTimer>();
-        var playerHealthBar = playerUIObject.GetComponentInChildren<HealthBar>();
+        playerUIObject.Init(playerRespawnerTimer);
 
-        playerHealthBar.gameObject.SetActive(false);
-        playerRespawnerTimer.OnRespawn += () => playerHealthBar.gameObject.SetActive(true);
         playerRespawnerTimer.OnRespawn += () => player.SetActive(true);
 
         var respawnTime = CalculateRespawnTime();

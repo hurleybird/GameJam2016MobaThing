@@ -4,6 +4,8 @@ using System.Collections.Generic;
 public class Spawner : MonoBehaviour {
 
     [SerializeField]
+    private Team _team;
+    [SerializeField]
     private GameObject creepFab;
     [SerializeField]
     private Transform spawnTrans;
@@ -12,6 +14,8 @@ public class Spawner : MonoBehaviour {
     [SerializeField]
     private float spawnDelay = 6f;
     private float timeLeft;
+
+    public Team Team { get { return _team; } }
 
 	// Use this for initialization
 	void Start () {
@@ -32,7 +36,7 @@ public class Spawner : MonoBehaviour {
         newObj.layer = gameObject.layer;
         newObj.GetComponent<Renderer>().material = GetComponent<Renderer>().material;
         Creep newCreep = newObj.GetComponent<Creep>();
-        newCreep.Init(waypoints);
+        newCreep.Init(waypoints, _team);
         timeLeft = spawnDelay;
     }
 }

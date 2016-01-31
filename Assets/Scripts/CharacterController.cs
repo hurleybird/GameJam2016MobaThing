@@ -7,7 +7,6 @@ public class CharacterController : MonoBehaviour {
     float movementRate = 0.1f;
     [SerializeField]
     float turnRate = 100f;
-    [SerializeField]
     private Player player;
     private Rigidbody rBody;
     private string prefix = "";
@@ -45,6 +44,8 @@ public class CharacterController : MonoBehaviour {
            rBody.AddForce(0, 0, inputVec.z * movementRate * Time.deltaTime);
         }
         if (Input.GetButton(prefix + "Fire1"))
+            player.FireAA();
+        if (Input.GetButton(prefix + "Fire3"))
             player.FireAbility1();
         if (Input.GetButton(prefix + "Fire2"))
             player.FireAbility2();
