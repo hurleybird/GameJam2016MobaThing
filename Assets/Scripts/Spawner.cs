@@ -8,9 +8,7 @@ public class Spawner : MonoBehaviour {
     [SerializeField]
     private GameObject creepFab;
     [SerializeField]
-    private Transform spawnTrans;
-    [SerializeField]
-    private List<Transform> waypoints = new List<Transform>();
+    private List<Lane> lanes = new List<Lane>();
     [SerializeField]
     private float spawnDelay = 6f;
     private float timeLeft;
@@ -32,11 +30,14 @@ public class Spawner : MonoBehaviour {
 
     void Spawn()
     {
-        GameObject newObj = Instantiate(creepFab, spawnTrans.position, Quaternion.identity) as GameObject;
-        newObj.layer = gameObject.layer;
-        newObj.GetComponent<Renderer>().material = GetComponent<Renderer>().material;
-        Creep newCreep = newObj.GetComponent<Creep>();
-        newCreep.Init(waypoints, _team);
-        timeLeft = spawnDelay;
+        foreach (Lane lane in lanes)
+        {
+            GameObject newObj = Instantiate(creepFab, lane.SpawnTrans.position, Quaternion.identity) as GameObject;
+            newObj.layer = gameObject.layer;
+            newObj.GetComponent<Renderer>().material = GetComponent<Renderer>().material;
+            Creep newCreep = newObj.GetComponent<Creep>();
+            newCreep.Init(lane.Waypoints, _team);
+            timeLeft = spawnDelay;
+        }
     }
 }

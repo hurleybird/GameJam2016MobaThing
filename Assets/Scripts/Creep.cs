@@ -37,6 +37,8 @@ public class Creep : MonoBehaviour {
             mask = 1<<9;
         else
             mask = 1<<8;
+
+        transform.LookAt(waypoints[0]);
     }
 
     void FixedUpdate()
