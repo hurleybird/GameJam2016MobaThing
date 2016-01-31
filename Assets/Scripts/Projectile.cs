@@ -46,7 +46,6 @@ public class Projectile : MonoBehaviour {
         {
             if (hitHealth.TakeDamage(damage * team.GetAttackMult()))
             {
-                Debug.Log(team != null);
                 team.Monies += hitHealth.MoniesToGive();
             }
         }

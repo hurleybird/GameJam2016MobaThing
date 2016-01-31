@@ -11,14 +11,35 @@ public class ControlPointManager : MonoBehaviour {
     [SerializeField]
     private Team team2;
 
+    [SerializeField]
+    private Transform team1Spawn;
+    [SerializeField]
+    private Transform team2Spawn;
+    [SerializeField]
+    private GameObject progressPrefab;
 
     // Use this for initialization
     void Start () {
         StartCoroutine(GiveGold());
+        foreach (Capturable cPoint in cPoints)
+        {
+            CreateHealthBar(cPoint);
+        }
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    public void CreateHealthBar(Capturable cPoint)
+    {
+        GameObject newObj = Instantiate(progressPrefab);
+        newObj.transform.SetParent(team1Spawn, false);
+        newObj.GetComponent<ProgressBar>().Init(cPoint);
+
+        newObj = Instantiate(progressPrefab);
+        newObj.transform.SetParent(team2Spawn, false);
+        newObj.GetComponent<ProgressBar>().Init(cPoint);
+    }
+
+    // Update is called once per frame
+    void Update () {
 	
 	}
 

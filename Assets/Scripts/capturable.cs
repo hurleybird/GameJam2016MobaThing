@@ -24,6 +24,9 @@ public class Capturable : MonoBehaviour
 
     private Renderer rend;
 
+    public float CaptureTrigger() { return captureTrigger; }
+    public float CapturePoints() { return capturePoints; }
+
     void Start()
     {
         rend = GetComponent<Renderer>();

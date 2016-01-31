@@ -9,6 +9,8 @@ public class HealthBar : MonoBehaviour {
     [SerializeField]
     private Health health;
     [SerializeField]
+    private Image lowerBar;
+    [SerializeField]
     private Image bar;
     private Canvas canvas;
 
@@ -45,5 +47,6 @@ public class HealthBar : MonoBehaviour {
         rect.anchoredPosition += new Vector2(0, 50);
 
         bar.fillAmount = health.CurrentHealth() / health.MaxHealth();
+        lowerBar.fillAmount = 1 - bar.fillAmount;
     }
 }
