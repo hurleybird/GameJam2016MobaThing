@@ -8,7 +8,7 @@ public class Team : MonoBehaviour {
 
     [SerializeField]
     private Allignment _side;
-    public List<capturable> ObjectivesHeld { get; set; }
+    public List<Capturable> ObjectivesHeld { get; set; }
     public List<Upgrade> Upgrades { get; set; }
     public int Monies { get; set; }
 
@@ -45,7 +45,7 @@ public class Team : MonoBehaviour {
         Upgrades.Add(new Upgrade());
 
         Monies = 0;
-        ObjectivesHeld = new List<capturable>();
+        ObjectivesHeld = new List<Capturable>();
         Monies = 0;
     }
 
