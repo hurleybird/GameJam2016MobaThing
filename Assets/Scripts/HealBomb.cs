@@ -27,7 +27,10 @@ public class HealBomb : MonoBehaviour {
         {
             Health hitHealth = hit.transform.GetComponent<Health>();
             if (hitHealth != null)
-                hitHealth.TakeHealing(100f * Time.deltaTime);
+            {
+                if (!hit.transform.GetComponent<Tower>() && ! hit.transform.GetComponent<Spawner>()) //would be OP on structures
+                    hitHealth.TakeHealing(100f * Time.deltaTime);
+            }
         }
 
     }
