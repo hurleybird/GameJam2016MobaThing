@@ -4,8 +4,12 @@ using System.Collections.Generic;
 
 public class Creep : MonoBehaviour {
 
+<<<<<<< Updated upstream
+=======
     public event Action<Transform> OnTargetInRange;
 
+    [SerializeField]
+>>>>>>> Stashed changes
     private List<Transform> waypoints = new List<Transform>();
     private int waypointIndex = 0;
     [SerializeField]
