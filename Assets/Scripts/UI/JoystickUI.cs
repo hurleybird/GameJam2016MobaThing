@@ -27,7 +27,9 @@ public class JoystickUI : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         Index = 0;
-	}
+        var pointer = new PointerEventData(EventSystem.current); // pointer event for Execute
+        ExecuteEvents.Execute(buttons[Index].gameObject, pointer, ExecuteEvents.pointerEnterHandler);
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -36,33 +38,61 @@ public class JoystickUI : MonoBehaviour {
             waitTime -= Time.deltaTime;
         else
         {
-            //buttons.ForEach(x => x.GetComponent<Image>().color = unselectColor);
+            var pointer = new PointerEventData(EventSystem.current); // pointer event for Execute
+
+            if (!buttons[Index].IsInteractable())
+            {
+                SelectNextButton(true);
+                ExecuteEvents.Execute(buttons[Index].gameObject, pointer, ExecuteEvents.pointerEnterHandler);
+            }
+
             if (Input.GetAxis(prefix + "Vertical") > 0.9f)
             {
-                Index--;
+                SelectNextButton(false);
                 waitTime = coolDown;
+                ExecuteEvents.Execute(buttons[Index].gameObject, pointer, ExecuteEvents.pointerEnterHandler);
             }
             else if (Input.GetAxis(prefix + "Vertical") < -0.9f)
             {
-                Index++;
+                SelectNextButton(true);
                 waitTime = coolDown;
+                ExecuteEvents.Execute(buttons[Index].gameObject, pointer, ExecuteEvents.pointerEnterHandler);
             }
 
-            var pointer = new PointerEventData(EventSystem.current); // pointer event for Execute
+            PointerExitButtons(pointer);
 
-            buttons.ForEach(x => ExecuteEvents.Execute(x.gameObject, pointer, ExecuteEvents.pointerExitHandler));
-
-            ExecuteEvents.Execute(buttons[Index].gameObject, pointer, ExecuteEvents.pointerEnterHandler);
-
-            if (Input.GetButtonDown(prefix + "Fire1")) // down: press
-                ExecuteEvents.Execute(buttons[Index].gameObject, pointer, ExecuteEvents.pointerDownHandler);
+            //if (Input.GetButtonDown(prefix + "Fire1")) // down: press
+            //ExecuteEvents.Execute(buttons[Index].gameObject, pointer, ExecuteEvents.pointerDownHandler);
 
             if (Input.GetButtonUp(prefix + "Fire1")) // up: release and activate
             {
-                ExecuteEvents.Execute(buttons[Index].gameObject, pointer, ExecuteEvents.pointerUpHandler);
-                ExecuteEvents.Execute(buttons[Index].gameObject, pointer, ExecuteEvents.pointerExitHandler);
+                //ExecuteEvents.Execute(buttons[Index].gameObject, pointer, ExecuteEvents.pointerUpHandler);
                 ExecuteEvents.Execute(buttons[Index].gameObject, pointer, ExecuteEvents.submitHandler);
+                //ExecuteEvents.Execute(buttons[Index].gameObject, pointer, ExecuteEvents.pointerExitHandler);
+                waitTime = coolDown;
             }
         }
 	}
+
+    private void SelectNextButton(bool forward)
+    {
+        int add = 1;
+        if (!forward)
+            add = -1;
+        for (int i = 0; i < 3; i++)
+        {
+            Index += add;
+            if (buttons[Index].IsInteractable())
+                break;
+        }
+    }
+
+    private void PointerExitButtons(PointerEventData pointer)
+    {
+        foreach (Button button in buttons)
+        {
+            if (button != buttons[Index])
+                ExecuteEvents.Execute(button.gameObject, pointer, ExecuteEvents.pointerExitHandler);
+        }
+    }
 }

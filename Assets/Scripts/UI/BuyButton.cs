@@ -16,13 +16,8 @@ public class BuyButton : MonoBehaviour {
         text = GetComponentInChildren<Text>();
     }
 
-    void LateUpdate()
+    void Update()
     {
-        button.interactable = false;
-        int? cost = team.GetCost(toUpgrade);
-        if (cost != null && team.Monies >= cost)
-            button.interactable = true;
-
         switch (team.Upgrades[(int)toUpgrade])
         {
             case Upgrade.None:
@@ -38,5 +33,9 @@ public class BuyButton : MonoBehaviour {
                 text.text = "Maxed";
                 break;
         }
+        button.interactable = false;
+        int? cost = team.GetCost(toUpgrade);
+        if (cost != null && team.Monies >= cost)
+            button.interactable = true;
     }
 }

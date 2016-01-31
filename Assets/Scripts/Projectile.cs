@@ -44,7 +44,7 @@ public class Projectile : MonoBehaviour {
         Health hitHealth = other.GetComponent<Health>();
         if (hitHealth != null)
         {
-            if (hitHealth.TakeDamage(damage))
+            if (hitHealth.TakeDamage(damage * team.GetAttackMult()))
             {
                 Debug.Log(team != null);
                 team.Monies += hitHealth.MoniesToGive();

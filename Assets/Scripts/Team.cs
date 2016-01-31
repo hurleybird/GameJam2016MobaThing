@@ -22,6 +22,21 @@ public class Team : MonoBehaviour {
         Init();
     }
 
+    public float GetAttackMult()
+    {
+        return 1f + (0.33f * (int)Upgrades[0]);
+    }
+
+    public float GetDefenseMult()
+    {
+        return 1f + (0.36f * (int)Upgrades[1]);
+    }
+
+    public float GetSpeedMult()
+    {
+        return 1f + (0.2f * (int)Upgrades[2]);
+    }
+
     public void Init()
     {
         Upgrades = new List<Upgrade>();
@@ -31,20 +46,24 @@ public class Team : MonoBehaviour {
 
         Monies = 0;
         ObjectivesHeld = new List<capturable>();
+        Monies = 0;
     }
 
     public void BuyAttack()
     {
+        Monies -= (int)GetCost(UpgradeType.Attack);
         Upgrades[(int)UpgradeType.Attack]++;
     }
 
     public void BuyHealth()
     {
+        Monies -= (int)GetCost(UpgradeType.Health);
         Upgrades[(int)UpgradeType.Health]++;
     }
 
     public void BuySpeed()
     {
+        Monies -= (int)GetCost(UpgradeType.Speed);
         Upgrades[(int)UpgradeType.Speed]++;
     }
 
@@ -58,7 +77,7 @@ public class Team : MonoBehaviour {
         {
             return 200;
         }
-        else if (Upgrades[(int)type] == Upgrade.One)
+        else if (Upgrades[(int)type] == Upgrade.Two)
         {
             return 300;
         }

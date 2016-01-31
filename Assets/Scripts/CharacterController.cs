@@ -22,8 +22,9 @@ public class CharacterController : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void FixedUpdate () {
-
+	void FixedUpdate ()
+    {
+        float speedMult = player.Team.GetSpeedMult();
         if (shop.activeInHierarchy)
             return;
 
@@ -35,18 +36,18 @@ public class CharacterController : MonoBehaviour {
         if (inputVec.magnitude > 0.05f)
         {
             Quaternion lookDir = Quaternion.LookRotation(inputVec);
-            transform.rotation = Quaternion.Slerp(transform.rotation, lookDir, Time.deltaTime * turnRate);
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookDir, Time.deltaTime * turnRate * speedMult);
         }
 
         //transform.Translate(new Vector3(inputVec.x * 15f * Time.deltaTime, 0, inputVec.z * 15f * Time.deltaTime));
 
         if (inputVec.x != 0)
         {
-            rBody.AddForce(inputVec.x * movementRate * Time.deltaTime, 0, 0);
+            rBody.AddForce(inputVec.x * movementRate * Time.deltaTime * speedMult, 0, 0);
         }
         if (inputVec.z != 0)
         {
-           rBody.AddForce(0, 0, inputVec.z * movementRate * Time.deltaTime);
+           rBody.AddForce(0, 0, inputVec.z * movementRate * Time.deltaTime * speedMult);
         }
         if (Input.GetButton(prefix + "Fire1"))
             player.FireAA();

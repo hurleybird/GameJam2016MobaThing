@@ -10,9 +10,11 @@ public class Health : MonoBehaviour {
     private float regenRate;
     [SerializeField]
     private float maxHealth;
+    private float adjustedMaxHealth;
     private float currentHealth;
     [SerializeField]
     private int moniesToGive = 0;
+    private Team team;
 	
     public int MoniesToGive() { return moniesToGive; }
     public float MaxHealth(){ return maxHealth; }
@@ -22,14 +24,35 @@ public class Health : MonoBehaviour {
     {
         currentHealth = maxHealth;
         HealthBarManager.Instance.CreateHealthBar(this);
+
+        Player player = GetComponent<Player>();
+        if (player != null)
+        {
+            team = player.Team;
+            return;
+        }
+        Creep creep = GetComponent<Creep>();
+        if (creep != null)
+        {
+            team = creep.Team;
+            return;
+        }
+        Spawner spawner = GetComponent<Spawner>();
+        if (spawner != null)
+        {
+            team = spawner.Team;
+            return;
+        }
     }
 
     void Update()
     {
-       currentHealth += regenRate * Time.deltaTime;
+        float defenseMult = team.GetDefenseMult();
+        adjustedMaxHealth = maxHealth * defenseMult;
+        currentHealth += regenRate * Time.deltaTime * defenseMult;
 
-       if (currentHealth > maxHealth)
-            currentHealth = maxHealth;
+        if (currentHealth > adjustedMaxHealth)
+            currentHealth = adjustedMaxHealth;
     }
 
     public bool TakeDamage(float damage)
