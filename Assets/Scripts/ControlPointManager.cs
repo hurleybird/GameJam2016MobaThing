@@ -6,6 +6,8 @@ using System.Collections.Generic;
 public class ControlPointManager : MonoBehaviour {
 
     [SerializeField]
+    private GameOver gameOver;
+    [SerializeField]
     private List<Capturable> cPoints = new List<Capturable>();
     [SerializeField]
     private Team team1;
@@ -65,7 +67,7 @@ public class ControlPointManager : MonoBehaviour {
             {
                 if (timeLeft == 0)
                 {
-                    GameOver.Instance.EndGame("Red Wins!", Color.red);
+                    gameOver.EndGame("Red Wins!", Color.red);
                     yield break;
                 }
                 countdownObj.SetActive(true);
@@ -79,7 +81,7 @@ public class ControlPointManager : MonoBehaviour {
             {
                 if (timeLeft == 0)
                 {
-                    GameOver.Instance.EndGame("Blue Wins!", Color.blue);
+                    gameOver.EndGame("Blue Wins!", Color.blue);
                     yield break;
                 }
                 countdownObj.SetActive(true);

@@ -24,11 +24,13 @@ public class Creep : MonoBehaviour {
 
     public Team Team { get; set; }
 
-    public void Init(List<Transform> _waypoints, Team _team)
+    public void Init(List<Transform> _waypoints, Team _team, bool spawnedViaPlayer = false)
     {
         waypoints = _waypoints;
         Team = _team;
         minimapIconRend.material.color = Team.Color;
+        if (spawnedViaPlayer)
+            GetComponent<Health>().ChangeMonies(1);
     }
 
     void Start()
@@ -78,6 +80,9 @@ public class Creep : MonoBehaviour {
         Quaternion prevRotation = transform.rotation;
         transform.LookAt(target);
         transform.rotation = Quaternion.Slerp(prevRotation, transform.rotation, Time.deltaTime * turnRate);
+
+        if (target == null || target.position == null)
+            return;
 
         float targetDistance = Vector3.Distance(transform.position, target.position);
 

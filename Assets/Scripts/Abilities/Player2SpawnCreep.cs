@@ -11,6 +11,6 @@ public class Player2SpawnCreep : Ability
         newObj.layer = gameObject.layer;
         //newObj.GetComponent<Renderer>().material = GetComponent<Renderer>().material;
         Creep newCreep = newObj.GetComponent<Creep>();
-        newCreep.Init(Waypoints, team);
+        newCreep.Init(Waypoints, team, true);
     }
 }

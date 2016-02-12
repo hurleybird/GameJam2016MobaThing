@@ -4,6 +4,8 @@ using System.Collections;
 public class VictoryManager : MonoBehaviour {
 
     [SerializeField]
+    private GameOver gameOver;
+    [SerializeField]
     private Spawner team1Spawn;
     [SerializeField]
     private Spawner team2Spawn;
@@ -12,9 +14,9 @@ public class VictoryManager : MonoBehaviour {
 	void Update () {
 
         if (team1Spawn == null)
-            GameOver.Instance.EndGame("Blue Wins!", Color.blue);
+            gameOver.EndGame("Blue Wins!", Color.blue);
         else if (team2Spawn == null)
-            GameOver.Instance.EndGame("Red Wins!", Color.red);
+            gameOver.EndGame("Red Wins!", Color.red);
 ;	
 	}
 }

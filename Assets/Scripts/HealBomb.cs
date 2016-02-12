@@ -24,7 +24,7 @@ public class HealBomb : MonoBehaviour {
         foreach (RaycastHit hit in hits)
         {
             Health hitHealth = hit.transform.GetComponent<Health>();
-            if (hitHealth != null)
+            if (hitHealth != null && hitHealth.gameObject.layer == 9)
             {
                 if (!hit.transform.GetComponent<Tower>() && ! hit.transform.GetComponent<Spawner>()) //would be OP on structures
                     hitHealth.TakeHealing(100f * Time.deltaTime);

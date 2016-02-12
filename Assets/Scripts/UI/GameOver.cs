@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
 
-public class GameOver : Singleton<GameOver> {
+public class GameOver :MonoBehaviour {
 
     [SerializeField]
     private Text text;
